@@ -1,0 +1,12 @@
+<html>
+ <body>
+ <h1>Hello from <%= node.name %></h1>
+ <p>The other webservers on this load balancer are:
+   <ul>
+   <% @machines.reject { |machine| machine.name == node.name }.each do |machine| %>
+   <li><%= machine.name %></li>
+   <% end %>
+   </ul>
+   </p>
+ </body>
+</html>
