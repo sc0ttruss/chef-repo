@@ -4,13 +4,13 @@ with_driver 'aws'
 name = "amanly"
 
 # declare security groups
-aws_security_group "#{name}-ssh" do
-  inbound_rules [{:ports => 22, :protocol => :tcp, :sources => ['0.0.0.0/0'] }]
-end
+#aws_security_group "#{name}-ssh" do
+#  inbound_rules [{:ports => 22, :protocol => :tcp, :sources => ['0.0.0.0/0'] }]
+#end
 
-aws_security_group "#{name}-http" do
-  inbound_rules [{:ports => 80, :protocol => :tcp, :sources => ['0.0.0.0/0'] }]
-end
+#aws_security_group "#{name}-http" do
+#  inbound_rules [{:ports => 80, :protocol => :tcp, :sources => ['0.0.0.0/0'] }]
+#end
 
 # specify what's needed to create a machine
 with_machine_options({
